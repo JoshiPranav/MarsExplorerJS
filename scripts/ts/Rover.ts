@@ -1,7 +1,7 @@
 import {Coordinates} from "./Coordinates";
 import {IRoverDirection} from "./IRoverDirection";
 import {Constants} from "./Constants";
-import {RoverDirectionFactory} from "./RoverDirectionFactory"
+import {RoverDirectionFactory} from "./RoverDirectionFactory";
 
 class Rover {
     constructor(x: number, y: number, cardinalDirection: string) {

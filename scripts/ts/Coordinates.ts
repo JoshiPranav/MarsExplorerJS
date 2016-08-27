@@ -1,6 +1,5 @@
-export class Coordinates {
-    constructor(x: number, y: number)
-    {
+class Coordinates {
+    constructor(x: number, y: number) {
         this.X = x;
         this.Y = y;
     }
@@ -8,3 +7,5 @@ export class Coordinates {
     public X: number;
     public Y: number;
 }
+
+export {Coordinates};

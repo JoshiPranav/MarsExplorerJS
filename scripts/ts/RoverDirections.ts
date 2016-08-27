@@ -1,8 +1,7 @@
 import {IRoverDirection} from "./IRoverDirection";
 import {Rover} from "./Rover";
 
-class North implements IRoverDirection
-{
+class North implements IRoverDirection {
     public  DirectionIdentifier() : string {
         return "North";
     }
@@ -20,8 +19,7 @@ class North implements IRoverDirection
     }
 }
 
-class South implements IRoverDirection
-{
+class South implements IRoverDirection {
     public  DirectionIdentifier() : string {
         return "South";
     }
@@ -39,8 +37,7 @@ class South implements IRoverDirection
     }
 }
 
-class East implements IRoverDirection
-{
+class East implements IRoverDirection {
     public  DirectionIdentifier() : string {
         return "East";
     }
@@ -59,8 +56,7 @@ class East implements IRoverDirection
     }
 }
 
-class West implements IRoverDirection
-{
+class West implements IRoverDirection {
     public  DirectionIdentifier() : string {
         return "West";
     }
