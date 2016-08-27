@@ -4,8 +4,8 @@ var RoverDirections = require("./RoverDirections");
 var RoverDirectionFactory = (function () {
     function RoverDirectionFactory() {
     }
-    RoverDirectionFactory.prototype.GetDirection = function (cardinalDirection) {
-        switch (cardinalDirection.toUpperCase()) {
+    RoverDirectionFactory.GetDirection = function (direction) {
+        switch (direction.toUpperCase()) {
             case "N":
                 return new RoverDirections.North();
             case "S":

@@ -2,8 +2,8 @@
 var Coordinates_1 = require("./Coordinates");
 var RoverDirectionFactory_1 = require("./RoverDirectionFactory");
 var Rover = (function () {
-    function Rover(x, y, cardinalDirection) {
-        this.RoverDirection = RoverDirectionFactory_1.RoverDirectionFactory.GetDirection(cardinalDirection);
+    function Rover(x, y, direction) {
+        this.RoverDirection = RoverDirectionFactory_1.RoverDirectionFactory.GetDirection(direction);
         this.RoverPosition = new Coordinates_1.Coordinates(x, y);
     }
     Rover.prototype.Execute = function (commands) {

@@ -4,8 +4,8 @@ import {Constants} from "./Constants";
 import {RoverDirectionFactory} from "./RoverDirectionFactory";
 
 class Rover {
-    constructor(x: number, y: number, cardinalDirection: string) {
-        this.RoverDirection = RoverDirectionFactory.GetDirection(cardinalDirection);
+    constructor(x: number, y: number, direction: string) {
+        this.RoverDirection = RoverDirectionFactory.GetDirection(direction);
         this.RoverPosition = new Coordinates(x, y);
     }
 
