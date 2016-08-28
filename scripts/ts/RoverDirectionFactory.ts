@@ -3,7 +3,7 @@ import {IRoverDirection} from "./IRoverDirection";
 import * as RoverDirections from "./RoverDirections";
 
 class RoverDirectionFactory {
-    public static GetDirection(direction : string) : IRoverDirection {
+    public static GetRoverDirection(direction : string) : IRoverDirection {
         switch(direction.toUpperCase()) {
             case "N" : 
                 return new RoverDirections.North();

@@ -44,7 +44,6 @@ class East implements IRoverDirection {
 
     public TurnRight(rover: Rover) : void {
        rover.RoverDirection = new South();
-
     }
 
     public TurnLeft(rover: Rover) : void {
