@@ -12,7 +12,7 @@ class Rover {
     public RoverPosition : Coordinates;
     public RoverDirection : IRoverDirection;
     
-    private GetCurrentStateDescription() : string {
+    public GetCurrentStateDescription() : string {
         let direction = this.RoverDirection.DirectionIdentifier;
         let position = `(${this.RoverPosition.X},${this.RoverPosition.Y})`;
 

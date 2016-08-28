@@ -4,8 +4,7 @@ import * as RoverDirections from "./RoverDirections";
 
 class RoverDirectionFactory {
     public static GetDirection(direction : string) : IRoverDirection {
-        switch(direction.toUpperCase())
-        {
+        switch(direction.toUpperCase()) {
             case "N" : 
                 return new RoverDirections.North();
             case "S" :
