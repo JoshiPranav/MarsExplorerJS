@@ -1,16 +1,15 @@
 import {IPlateauValidator} from "./IPlateauValidator";
-import {PlateauValidator} from "./PlateauValidator";
 
 class Plateau {
     public XLength : number;
     public YLength : number;
-    private _plateauValidator : IPlateauValidator;
+    private _validator : IPlateauValidator;
 
-    constructor (xlength : number, ylength : number) {
+    constructor (xlength : number, ylength : number, validator : IPlateauValidator) {
         this.XLength = xlength;
         this.YLength = ylength;
-        this._plateauValidator = new PlateauValidator();
-        this._plateauValidator.Validate(this);
+        this._validator = validator;
+        this._validator.Validate(this);
     }
 
 }

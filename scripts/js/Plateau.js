@@ -1,13 +1,12 @@
 "use strict";
-var PlateauValidator_1 = require("./PlateauValidator");
 var Plateau = (function () {
-    function Plateau(xlength, ylength) {
+    function Plateau(xlength, ylength, validator) {
         this.XLength = xlength;
         this.YLength = ylength;
-        this._plateauValidator = new PlateauValidator_1.PlateauValidator();
-        this._plateauValidator.Validate(this);
+        this._validator = validator;
+        this._validator.Validate(this);
     }
     return Plateau;
 }());
 exports.Plateau = Plateau;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxhdGVhdS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3RzL1BsYXRlYXUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLGlDQUErQixvQkFBb0IsQ0FBQyxDQUFBO0FBRXBEO0lBS0ksaUJBQWEsT0FBZ0IsRUFBRSxPQUFnQjtRQUMzQyxJQUFJLENBQUMsT0FBTyxHQUFHLE9BQU8sQ0FBQztRQUN2QixJQUFJLENBQUMsT0FBTyxHQUFHLE9BQU8sQ0FBQztRQUN2QixJQUFJLENBQUMsaUJBQWlCLEdBQUcsSUFBSSxtQ0FBZ0IsRUFBRSxDQUFDO1FBQ2hELElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDMUMsQ0FBQztJQUVMLGNBQUM7QUFBRCxDQUFDLEFBWkQsSUFZQztBQUVPLGVBQU8sV0FGZDtBQUVnQiJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxhdGVhdS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3RzL1BsYXRlYXUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUVBO0lBS0ksaUJBQWEsT0FBZ0IsRUFBRSxPQUFnQixFQUFFLFNBQTZCO1FBQzFFLElBQUksQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDO1FBQ3ZCLElBQUksQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDO1FBQ3ZCLElBQUksQ0FBQyxVQUFVLEdBQUcsU0FBUyxDQUFDO1FBQzVCLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ25DLENBQUM7SUFFTCxjQUFDO0FBQUQsQ0FBQyxBQVpELElBWUM7QUFFTyxlQUFPLFdBRmQ7QUFFZ0IifQ==

@@ -2,7 +2,6 @@ import {Position} from "./Position";
 import {IRoverDirection} from "./IRoverDirection";
 import {Plateau} from  "./Plateau";
 import {IRoverValidator} from "./IRoverValidator";
-import {RoverValidator} from "./RoverValidator";
 import {Constants} from "./Constants";
 
 class Rover {
@@ -10,15 +9,15 @@ class Rover {
     public RoverPosition : Position;
     public AssociatedPlateau : Plateau;
     public RoverDirection : IRoverDirection;
-    private _roverValidator : IRoverValidator;
+    private _validator : IRoverValidator;
 
-    constructor(associatedPlateau: Plateau, startingPosition: Position, direction: IRoverDirection) {
+    constructor(associatedPlateau: Plateau, startingPosition: Position, direction: IRoverDirection, validator: IRoverValidator) {
         this.RoverPosition = startingPosition;
         this.AssociatedPlateau = associatedPlateau;
         this.RoverDirection = direction;
 
-        this._roverValidator = new RoverValidator();
-        this._roverValidator.Validate(this);
+        this._validator = validator;
+        this._validator.Validate(this);
     }
 
     public GetCurrentState() : string {
