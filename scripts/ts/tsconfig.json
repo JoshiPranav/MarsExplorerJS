@@ -2,6 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "outDir": "../js",
-        "sourceMap": false
+        "inlineSourceMap": true,
+        "watch": true
     }
 }

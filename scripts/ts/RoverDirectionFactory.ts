@@ -2,7 +2,7 @@ import {Constants} from "./Constants";
 import {IRoverDirection} from "./IRoverDirection";
 import * as RoverDirections from "./RoverDirections";
 
-export class RoverDirectionFactory {
+class RoverDirectionFactory {
     public static GetDirection(direction : string) : IRoverDirection {
         switch(direction.toUpperCase())
         {
@@ -19,3 +19,5 @@ export class RoverDirectionFactory {
          }
     }
 }
+
+export {RoverDirectionFactory};
