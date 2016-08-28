@@ -2,6 +2,7 @@ import {Coordinates} from "./Coordinates";
 import {IRoverDirection} from "./IRoverDirection";
 import {Constants} from "./Constants";
 import {RoverDirectionFactory} from "./RoverDirectionFactory";
+import {Plateau} from  "./Plateau";
 
 class Rover {
     constructor(x: number, y: number, direction: string) {
