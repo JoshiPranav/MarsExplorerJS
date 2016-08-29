@@ -14,7 +14,7 @@ class RoverDirectionFactory {
             case "W":
                 return new RoverDirections.West();
             default:
-                throw Constants.InValidDirectionMessage;
+                console.log(Constants.InValidDirectionMessage);
          }
     }
 }
