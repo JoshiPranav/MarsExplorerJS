@@ -1,4 +1,4 @@
-import {IPlateauValidator} from "./IPlateauValidator";
+import {IPlateauValidator} from "../interfaces/IPlateauValidator";
 
 class Plateau {
     public XLength : number;

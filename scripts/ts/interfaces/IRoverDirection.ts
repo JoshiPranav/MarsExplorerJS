@@ -1,4 +1,4 @@
-import {Rover} from "./Rover";
+import {Rover} from "../Rover";
 
 interface IRoverDirection {
     DirectionIdentifier() : string;

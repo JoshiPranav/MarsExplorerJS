@@ -1,9 +1,9 @@
-import {Position} from "./Position";
-import {IRoverDirection} from "./IRoverDirection";
-import {Plateau} from  "./Plateau";
-import {IRoverValidator} from "./IRoverValidator";
-import {Constants} from "./Constants";
-import {RoverDirectionFactory} from "./RoverDirectionFactory";
+import {Position} from "./entities/Position";
+import {IRoverDirection} from "./interfaces/IRoverDirection";
+import {Plateau} from  "./entities/Plateau";
+import {IRoverValidator} from "./interfaces/IRoverValidator";
+import {Constants} from "./helpers/Constants";
+import {RoverDirectionFactory} from "./helpers/RoverDirectionFactory";
 
 class Rover {
     public RoverPosition : Position;

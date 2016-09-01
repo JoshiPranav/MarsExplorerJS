@@ -1,4 +1,4 @@
-import {Plateau} from "./Plateau";
+import {Plateau} from "../entities/Plateau";
 
 interface IPlateauValidator {
     Validate(plateau: Plateau) : void;

@@ -1,6 +1,6 @@
-import {IRoverValidator} from "./IRoverValidator";
-import {Constants} from "./Constants";
-import {Rover} from "./Rover";
+import {IRoverValidator} from "../interfaces/IRoverValidator";
+import {Constants} from "../helpers/Constants";
+import {Rover} from "../Rover";
 
 class RoverValidator implements IRoverValidator {
     public Validate(rover: Rover) : void {

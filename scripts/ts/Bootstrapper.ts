@@ -1,10 +1,10 @@
-import {IPlateauValidator} from "./IPlateauValidator";
-import {PlateauValidator} from "./PlateauValidator";
-import {Plateau} from "./Plateau";
-import {IRoverValidator} from "./IRoverValidator";
-import {RoverValidator} from "./RoverValidator";
+import {IPlateauValidator} from "./interfaces/IPlateauValidator";
+import {PlateauValidator} from "./classes/PlateauValidator";
+import {Plateau} from "./entities/Plateau";
+import {IRoverValidator} from "./interfaces/IRoverValidator";
+import {RoverValidator} from "./classes/RoverValidator";
 import {Rover} from "./Rover";
-import {Position} from "./Position";
+import {Position} from "./entities/Position";
 
 let plateau = new Plateau(20,20,new PlateauValidator());
 let position = new Position(5,5);

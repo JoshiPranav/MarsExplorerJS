@@ -1,5 +1,5 @@
-import {IRoverDirection} from "./IRoverDirection";
-import {Rover} from "./Rover";
+import {IRoverDirection} from "../interfaces/IRoverDirection";
+import {Rover} from "../Rover";
 
 class North implements IRoverDirection {
     public  DirectionIdentifier() : string {

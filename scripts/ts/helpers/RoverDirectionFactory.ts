@@ -1,6 +1,6 @@
 import {Constants} from "./Constants";
-import {IRoverDirection} from "./IRoverDirection";
-import * as RoverDirections from "./RoverDirections";
+import {IRoverDirection} from "../interfaces/IRoverDirection";
+import * as RoverDirections from "../classes/RoverDirections";
 
 class RoverDirectionFactory {
     public static GetRoverDirection(direction : string) : IRoverDirection {

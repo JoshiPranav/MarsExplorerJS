@@ -1,6 +1,6 @@
-import {Plateau} from "./Plateau";
-import {IPlateauValidator} from "./IPlateauValidator";
-import {Constants} from "./Constants";
+import {Plateau} from "../entities/Plateau";
+import {IPlateauValidator} from "../interfaces/IPlateauValidator";
+import {Constants} from "../helpers/Constants";
 
 class PlateauValidator implements IPlateauValidator {
     public Validate(plateau : Plateau) : void {
