@@ -1,8 +1,15 @@
 {
     "compilerOptions": {
-        "target": "es5"
-        ,"outDir": "../js"
-        ,"inlineSourceMap": true
-        //,"watch": true
+        /*"baseUrl": ".",
+        "paths": {
+            "classes/*": ["classes/*"],
+            "entities/*": ["entities/*"],
+            "helpers/*": ["helpers/*"],
+            "interfaces/*": ["interfaces/*"]
+        },*/
+        "target": "es5",
+        "outDir": "../js",
+        "inlineSourceMap": true
+            //,"watch": true
     }
 }
