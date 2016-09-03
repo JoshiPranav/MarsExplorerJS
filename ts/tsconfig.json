@@ -1,16 +1,13 @@
 {
     "compilerOptions": {
-        /*"baseUrl": ".",
-        "paths": {
-            "classes/*": ["classes/*"],
-            "entities/*": ["entities/*"],
-            "helpers/*": ["helpers/*"],
-            "interfaces/*": ["interfaces/*"]
-        },*/
+        "module": "commonjs",
         "target": "es5",
+        "inlineSourceMap": true,
+        "noImplicitAny": true,
         "rootDir": ".",
-        "outDir": "../app/js",
-        "inlineSourceMap": true
-            //,"watch": true
-    }
+        "outDir": "../app/js"
+    },
+    "exclude": [
+        "node_modules"
+    ]
 }

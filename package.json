@@ -1,16 +1,19 @@
 {
-    "name": "marsexplorerjs",
-    "version": "1.0.0",
-    "description": "Typescript",
-    "main": "bootstrapper.js",
-    "devDependencies": {
-        "gulp": "^3.9.0",
-        "gulp-shell": "^0.5.1",
-        "jasmine-core": "^2.4.1",
-        "karma": "^0.13.15",
-        "karma-jasmine": "^0.3.6",
-        "karma-phantomjs-launcher": "^0.2.1",
-        "karma-html-detailed-reporter": "^1.1.8",
-        "phantomjs": "^1.9.19"
-    }
+  "name": "marsexplorerjs",
+  "version": "1.0.0",
+  "description": "Typescript",
+  "main": "bootstrapper.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-shell": "^0.5.1",
+    "gulp-typescript": "^2.13.6",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.15",
+    "karma-html-detailed-reporter": "^1.1.8",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.19",
+    "tslint-stylish": "^2.1.0-beta"
+  }
 }
