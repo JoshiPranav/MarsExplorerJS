@@ -1,15 +1,15 @@
-{
-    "version": "0.1.0",
-    "configurations": [{
-        "name": "Debug Current TypeScript File",
-        "type": "node",
-        "request": "launch",
-        // File currently being viewed
-        "program": "${file}",
-        "stopOnEntry": true,
-        "args": [],
-        "cwd": "${workspaceRoot}/src",
-        "sourceMaps": true,
-        "outDir": "${workspaceRoot}/dist"
-    }]
-}
+// {
+//     "version": "0.1.0",
+//     "configurations": [{
+//         "name": "Debug Current TypeScript File",
+//         "type": "node",
+//         "request": "launch",
+//         // File currently being viewed
+//         "program": "${file}",
+//         "stopOnEntry": true,
+//         "args": [],
+//         "cwd": "${workspaceRoot}/ts",
+//         "sourceMaps": true,
+//         "outDir": "${workspaceRoot}/dist"
+//     }]
+// }
