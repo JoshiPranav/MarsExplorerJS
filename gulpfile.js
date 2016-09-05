@@ -11,24 +11,38 @@ var gulp = require("gulp"),
     istanbul = require("gulp-istanbul"),
     browserSync = require('browser-sync').create();
 
-//ts lint
-// gulp.task("lint", function() {
-//     return gulp.src([
-//             "app/**/**.ts"
-//         ])
-//         .pipe(tslint({}))
-//         .pipe(tslint.report("verbose"));
-// });
 
-//ts build
+//build tsc
 var tsProject = tsc.createProject("app/ts/tsconfig.json");
 gulp.task("build-app", function() {
-    return tsProject.src()
+    return gulp.src([
+            "app/ts/scripts/**/*.ts"
+        ])
         .pipe(tsc(tsProject))
-        .js.pipe(gulp.dest("app/js"));
+        .js.pipe(gulp.dest("app/js/scripts"));
 });
 
-//ts watch
-// gulp.task("watch", ["default"], function() {
-//     gulp.watch(["app/**/**.ts"], ["default"]);
-// });
+//build tests
+gulp.task("build-tests", function() {
+    return gulp.src([
+            "app/ts/tests/**/*.ts"
+        ])
+        .pipe(tsc(tsProject))
+        .js.pipe(gulp.dest("app/js/tests"));
+});
+
+//test coverage report
+gulp.task("istanbul:hook", function() {
+    return gulp.src(['app/js/scripts.js'])
+        // Covering files
+        .pipe(istanbul())
+        // Force `require` to return covered files
+        .pipe(istanbul.hookRequire());
+});
+
+//run unit tests
+gulp.task("run-tests", ["istanbul:hook"], function() {
+    return gulp.src('app/js/tests/*.tests.js')
+        .pipe(mocha({ ui: 'bdd' }))
+        .pipe(istanbul.writeReports());
+});
