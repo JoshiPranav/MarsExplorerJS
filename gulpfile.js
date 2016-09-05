@@ -16,19 +16,10 @@ var gulp = require("gulp"),
 var tsProject = tsc.createProject("app/ts/tsconfig.json");
 gulp.task("build-app", function() {
     return gulp.src([
-            "app/ts/scripts/**/*.ts"
+            "app/ts/**/**/*.ts"
         ])
         .pipe(tsc(tsProject))
-        .js.pipe(gulp.dest("app/js/scripts"));
-});
-
-//build tests
-gulp.task("build-tests", function() {
-    return gulp.src([
-            "app/ts/tests/**/*.ts"
-        ])
-        .pipe(tsc(tsProject))
-        .js.pipe(gulp.dest("app/js/tests"));
+        .js.pipe(gulp.dest("app/js"));
 });
 
 //test coverage report

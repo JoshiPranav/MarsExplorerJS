@@ -1,11 +1,29 @@
 "use strict";
 ///reference path="../typings/index.d.ts
 var chai_1 = require("chai");
-describe("Rover Class", function () {
-    it("Should Pass: 1 Should be equal to 1", function () {
-        chai_1.expect(1).eql(1);
+var Position_1 = require("../scripts/entities/Position");
+var PlateauValidator_1 = require("../scripts/classes/PlateauValidator");
+var Plateau_1 = require("../scripts/entities/Plateau");
+var RoverValidator_1 = require("../scripts/classes/RoverValidator");
+var Rover_1 = require("../scripts/Rover");
+describe("Rover Class", function() {
+    var direction;
+    var position;
+    var plateau;
+    var rover;
+
+    function Setup() {
+        direction = "N";
+        position = new Position_1.Position(5, 5);
+        plateau = new Plateau_1.Plateau(20, 20, new PlateauValidator_1.PlateauValidator());
+        rover = new Rover_1.Rover(plateau, position, direction, new RoverValidator_1.RoverValidator());
+    }
+    before(function() {
+        Setup();
     });
-    it("Should Pass: 1 should not be equal to 2", function () {
-        chai_1.expect(1).not.eql(2);
+    it("Should return correct rover state", function() {
+        var commands = ["L", "L", "M", "R", "M", "M"];
+        var roverState = rover.Execute(commands);
+        chai_1.expect(roverState).equals("Rover is at (3,4) facing West.");
     });
 });
