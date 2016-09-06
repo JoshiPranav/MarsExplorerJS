@@ -2,12 +2,12 @@
 var Constants_1 = require("./helpers/Constants");
 var RoverDirectionFactory_1 = require("./helpers/RoverDirectionFactory");
 var Rover = (function () {
-    function Rover(associatedPlateau, startingPosition, direction, validator) {
+    function Rover(associatedPlateau, startingPosition, direction, positionValidator) {
         this.RoverPosition = startingPosition;
         this.AssociatedPlateau = associatedPlateau;
         this.RoverDirection = RoverDirectionFactory_1.RoverDirectionFactory.GetRoverDirection(direction);
-        this._validator = validator;
-        this._validator.Validate(this);
+        this._positionValidator = positionValidator;
+        this._positionValidator.IsValidPosition(this.RoverPosition, this.AssociatedPlateau);
     }
     Rover.prototype.Execute = function (commands) {
         var _this = this;

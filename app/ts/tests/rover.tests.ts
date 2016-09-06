@@ -3,7 +3,7 @@ import { expect } from "chai";
 import {Position} from "../scripts/entities/Position";
 import {PlateauValidator} from "../scripts/classes/PlateauValidator";
 import {Plateau} from "../scripts/entities/Plateau";
-import {RoverValidator} from "../scripts/classes/RoverValidator";
+import {PositionValidator} from "../scripts/classes/PositionValidator";
 import {Rover} from "../scripts/Rover";
 
 describe("Rover Class", () => {
@@ -17,7 +17,7 @@ describe("Rover Class", () => {
         direction = "N";
         position = new Position(5, 5);
         plateau = new Plateau(20, 20, new PlateauValidator());
-        rover = new Rover(plateau, position, direction, new RoverValidator());
+        rover = new Rover(plateau, position, direction, new PositionValidator());
     }
 
     before(function() {

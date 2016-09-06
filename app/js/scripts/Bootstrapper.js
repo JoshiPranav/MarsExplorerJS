@@ -1,12 +1,12 @@
 "use strict";
 var PlateauValidator_1 = require("./classes/PlateauValidator");
 var Plateau_1 = require("./entities/Plateau");
-var RoverValidator_1 = require("./classes/RoverValidator");
+var PositionValidator_1 = require("./classes/PositionValidator");
 var Rover_1 = require("./Rover");
 var Position_1 = require("./entities/Position");
 var plateau = new Plateau_1.Plateau(20, 20, new PlateauValidator_1.PlateauValidator());
 var position = new Position_1.Position(5, 5);
-var rover = new Rover_1.Rover(plateau, position, "N", new RoverValidator_1.RoverValidator());
+var rover = new Rover_1.Rover(plateau, position, "N", new PositionValidator_1.PositionValidator());
 var commands = ["L", "L", "M", "R", "M", "M"];
 var state = rover.Execute(commands);
 console.log(state);

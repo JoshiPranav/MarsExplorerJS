@@ -1,7 +1,7 @@
 import {Position} from "./entities/Position";
 import {IRoverDirection} from "./interfaces/IRoverDirection";
 import {Plateau} from  "./entities/Plateau";
-import {IRoverValidator} from "./interfaces/IRoverValidator";
+import {IPositionValidator} from "./interfaces/IPositionValidator";
 import {Constants} from "./helpers/Constants";
 import {RoverDirectionFactory} from "./helpers/RoverDirectionFactory";
 
@@ -9,15 +9,15 @@ class Rover {
     public RoverPosition: Position;
     public AssociatedPlateau: Plateau;
     public RoverDirection: IRoverDirection;
-    private _validator: IRoverValidator;
+    private _positionValidator: IPositionValidator;
 
-    constructor(associatedPlateau: Plateau, startingPosition: Position, direction: string, validator: IRoverValidator) {
+    constructor(associatedPlateau: Plateau, startingPosition: Position, direction: string, positionValidator: IPositionValidator) {
         this.RoverPosition = startingPosition;
         this.AssociatedPlateau = associatedPlateau;
         this.RoverDirection = RoverDirectionFactory.GetRoverDirection(direction);
 
-        this._validator = validator;
-        this._validator.Validate(this);
+        this._positionValidator = positionValidator;
+        this._positionValidator.IsValidPosition(this.RoverPosition, this.AssociatedPlateau);
     }
 
     public Execute(commands: Array<string>): string {
