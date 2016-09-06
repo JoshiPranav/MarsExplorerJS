@@ -19,6 +19,6 @@ Git Clone / Download code.
 
 On Node command prompt : 
 
->cd {root directory}/app/js/scripyts
+>cd {root directory}/app/js/scripts
 
 > node Bootstrapper.js
