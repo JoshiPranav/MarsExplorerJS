@@ -22,3 +22,11 @@ On Node command prompt :
 >cd {root directory}/app/js/scripts
 
 > node Bootstrapper.js
+
+OR
+
+>run tests in /app/ts/tests
+
+OR
+
+> run tests in /app/js/tests
