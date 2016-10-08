@@ -1,7 +1,7 @@
 import {Plateau} from "../entities/Plateau";
 
 interface IPlateauValidator {
-    Validate(plateau: Plateau): void;
+    IsValid(plateau: Plateau): void;
 }
 
 export {IPlateauValidator};

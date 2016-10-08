@@ -6,7 +6,7 @@ var PlateauValidator_1 = require("../scripts/classes/PlateauValidator");
 var Plateau_1 = require("../scripts/entities/Plateau");
 var PositionValidator_1 = require("../scripts/classes/PositionValidator");
 var Rover_1 = require("../scripts/Rover");
-describe("Rover Class", function () {
+describe("Rover Tests", function () {
     var direction;
     var position;
     var plateau;
@@ -14,8 +14,8 @@ describe("Rover Class", function () {
     function Setup() {
         direction = "N";
         position = new Position_1.Position(5, 5);
-        plateau = new Plateau_1.Plateau(20, 20, new PlateauValidator_1.PlateauValidator());
-        rover = new Rover_1.Rover(plateau, position, direction, new PositionValidator_1.PositionValidator());
+        plateau = new Plateau_1.Plateau(20, 20);
+        rover = new Rover_1.Rover(plateau, position, direction, new PositionValidator_1.PositionValidator(), new PlateauValidator_1.PlateauValidator());
     }
     before(function () {
         Setup();

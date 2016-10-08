@@ -1,12 +1,12 @@
 import {Plateau} from "../entities/Plateau";
 import {IPlateauValidator} from "../interfaces/IPlateauValidator";
-import {Constants} from "../helpers/Constants";
 
 class PlateauValidator implements IPlateauValidator {
-    public Validate(plateau: Plateau): void {
+    public IsValid(plateau: Plateau): boolean {
         if (plateau.XLength < 0 || plateau.YLength < 0) {
-             console.log(Constants.InValidPlateauDimensions);
+             return false;
          }
+         return true;
     }
 }
 

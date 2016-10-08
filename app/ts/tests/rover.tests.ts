@@ -6,8 +6,7 @@ import {Plateau} from "../scripts/entities/Plateau";
 import {PositionValidator} from "../scripts/classes/PositionValidator";
 import {Rover} from "../scripts/Rover";
 
-describe("Rover Class", () => {
-
+describe("Rover Tests", () => {
     let direction: string;
     let position: Position;
     let plateau: Plateau;
@@ -16,8 +15,8 @@ describe("Rover Class", () => {
     function Setup() {
         direction = "N";
         position = new Position(5, 5);
-        plateau = new Plateau(20, 20, new PlateauValidator());
-        rover = new Rover(plateau, position, direction, new PositionValidator());
+        plateau = new Plateau(20, 20);
+        rover = new Rover(plateau, position, direction, new PositionValidator(), new PlateauValidator());
     }
 
     before(function() {
