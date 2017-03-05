@@ -14,6 +14,7 @@ var gulp = require("gulp"),
 
 //build tsc
 var tsProject = tsc.createProject("app/ts/tsconfig.json");
+
 gulp.task("build-app", function() {
     return gulp.src([
             "app/ts/**/**/*.ts"
