@@ -22,7 +22,7 @@ gulp.task("build-app", function() {
         .js.pipe(gulp.dest("app/js"));
 });
 
-//test coverage report
+//test coverage report.
 gulp.task("istanbul:hook", function() {
     return gulp.src(['app/js/scripts.js'])
         // Covering files
